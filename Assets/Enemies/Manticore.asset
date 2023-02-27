@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: Manticore
+  m_EditorClassIdentifier: 
+  alignment: loyal mauvais
+  size: 3
+  armorClass: 14
+  speed: 9 m, vol 15 m
+  strength: 17 (+3
+  dexterity: 16 (+3)
+  constitution: 17 (+3
+  intelligence: 7 (-2)
+  wisdom: 12 (+1)
+  charisma: 8 (-1)
+  power: 3 (700 PX)
+  description: "Une manticore poss\xE8de une t\xEAte vaguement humano\xEFde, le corps
+    d'un lion et les ailes d'un dragon. Sa longue queue se termine en une grappe
+    de piquants mortels pouvant empaler une proie depuis une distance impressionnante."
+  languages: commun
+  skills: 
+  senses: vision dans le noir 18 m, Perception passive 11
+  capacity:
+  - name: Refloraison de piquants
+    content: "La manticore poss\xE8de une queue dot\xE9e de 24 piquants. Les piquants
+      utilis\xE9s repoussent lorsque la manticore termine un repos long."
+  actions:
+  - name: Attaques multiples
+    content: 'La manticore effectue trois attaques : une de morsure et deux avec
+      ses griffes, ou trois avec sa queue.'
+  - name: Griffes
+    content: "Attaque au corps \xE0 corps avec une arme : +5 au toucher, allonge
+      1,50 m, une cible. Touch\xE9 : 6 (1d6 + 3) d\xE9g\xE2ts tranchants."
+  - name: Morsure
+    content: " Attaque au corps \xE0 corps avec une arme : +5 au toucher, allonge
+      1,50 m, une cible. Touch\xE9 : 7 (1d8 + 3) d\xE9g\xE2ts perforants."
+  - name: Piquant
+    content: "Attaque \xE0 distance avec une arme : +5 au toucher, port\xE9e 30/60
+      m, une cible. Touch\xE9 : 7 (1d8 + 3) d\xE9g\xE2ts perforants."
+  image: {fileID: 0}
+  health: 68

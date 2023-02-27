@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: Reclus gnome des roches
+  m_EditorClassIdentifier: 
+  alignment: 
+  size: 1
+  armorClass: 10
+  speed: 7.5 m
+  strength: 6
+  dexterity: 11
+  constitution: 10
+  intelligence: 15
+  wisdom: 10
+  charisma: 13
+  power: 1/4 (50px)
+  description: 
+  languages: 
+  skills: 
+  senses: 
+  capacity:
+  - name: 'Ruse gnome '
+    content: "Le gnome est avantag\xE9 aux jets de sauvegarde d'int\xE9ligence, de
+      sagess et de charisme contre la magie"
+  - name: Sorts
+    content: "Le gnome est un lanceur de sorts de niveau 2, Sa caract\xE9ristique
+      d'incantation est l'int\xE9ligence (DD de sauvegarde 12 +4 toucher avec ses
+      attaques de sort)"
+  - name: mineurs
+    content: main du mage, prestigitation, rayon de givre
+  - name: 1 niveau (3 emplacements)
+    content: armure du mage, bouclier, detection de la magie, projectil magique
+  actions:
+  - name: Projectiel magique
+    content: "Le gnome cr\xE9e trois traits magique. Chaque trait touche une cr\xE9ature
+      choisie oar le gnome dans un rayon de 36m et lui inflige 3 (1d4 +1) d\xE9gats
+      de force"
+  - name: Rayon de givre
+    content: "Attaque de sort \xE0 distance : +4 toucher, port\xE9e 18m, une cr\xE9ature.
+      Touch\xE9: 4 (1d8) d\xE9gats de froid, et la vitesse de ka cibe est r\xE9duite
+      de 3m jusqu'au d\xE9but du tour suivant du gnome"
+  image: {fileID: 21300000, guid: f48973807d8e1e94fb727f04fe58da9f, type: 3}
+  health: 7

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: Mimique
+  m_EditorClassIdentifier: 
+  alignment: 
+  size: 2
+  armorClass: 12
+  speed: 4.5
+  strength: 17
+  dexterity: 12
+  constitution: 15
+  intelligence: 5
+  wisdom: 13
+  charisma: 8
+  power: 2 (450px)
+  description: 
+  languages: 
+  skills: 
+  senses: 
+  capacity:
+  - name: "M\xE9tamorphe"
+    content: "La mimique peut utiliser son action pour se m\xE9tamorphoser en un
+      objet, ou pour reprendre son aspect v\xE9ritable informe. Ses statistiques
+      sont les m\xEAmes quelle que soit sa forme. L'\xE9quipement qu'elle porte ou
+      transporte ne se transforme pas. Elle retrouve sa forme v\xE9ritable lorsqu'elle
+      meurt."
+  - name: Collant (forme d'objet uniquement).
+    content: "La mimique adh\xE8re \xE0 tout ce qui la touche. Une cr\xE9ature de
+      taille TG ou inf\xE9rieure coll\xE9e \xE0 la mimique est \xE9galement agripp\xE9e
+      par elle (DD 13 pour s'\xE9chapper). Les jets de caract\xE9ristique effectu\xE9s
+      pour s'\xE9chapper de cette prise ont un d\xE9savantage."
+  - name: Apparence trompeuse (forme d'objet uniquement)
+    content: "Tant que la mimique reste immobile, elle ne peut \xEAtre distingu\xE9e
+      d'un objet ordinaire."
+  - name: Lutteur
+    content: ". La mimique a un avantage aux jets d'attaque effectu\xE9s contre une
+      cr\xE9ature qu'elle agrippe."
+  actions:
+  - name: Pseudopode
+    content: "Attaque au corps \xE0 corps avec une arme : +5 au toucher, allonge
+      1,50 m, une cible. Touch\xE9 : 7 (1d8 + 3) d\xE9g\xE2ts contondants. Si la
+      mimique est sous forme d'objet, la cible est affect\xE9e par le trait Collant."
+  - name: Morsure
+    content: "Attaque au corps \xE0 corps avec une arme : +5 au toucher, allonge
+      1,50 m, une cible. Touch\xE9 : 7 (1d8 + 3) d\xE9g\xE2ts perforants + 4 (1d8)
+      d\xE9g\xE2ts d'acide."
+  image: {fileID: 21300000, guid: ed37bdc695041eb41b0a39676fa6dd60, type: 3}
+  health: 60
