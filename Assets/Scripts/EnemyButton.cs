@@ -21,6 +21,7 @@ public class EnemyButton : MonoBehaviour
     public void SetEnemy(EnemySO enemySO)
     {
         image.sprite = enemySO.image;
+        enemyName = enemySO.name;
         button.onClick.AddListener(() => FindObjectOfType<EnemiesController>().SetSelectedEnemy(enemySO));
         buttonStats.onClick.AddListener(() => EnemyStats.ShowEnemyStats(enemySO));
     }
