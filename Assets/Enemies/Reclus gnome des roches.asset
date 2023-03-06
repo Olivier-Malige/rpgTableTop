@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Reclus gnome des roches
   m_EditorClassIdentifier: 
   alignment: 
-  size: 1
+  size: 0
   armorClass: 10
   speed: 7.5 m
   strength: 6

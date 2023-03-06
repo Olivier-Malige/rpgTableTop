@@ -1,31 +1,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class EnemiesController : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public bool isEditing;
-    public GameObject characterToMove;
+
     public EnemySO[] enemies;
     public EnemySO selectedEnemy;
     public List<GameObject> enemiesButtons = new List<GameObject>();
 
+    private AdventureManager adventureManager;
+
     [SerializeField] private GameObject enemyButtonPrefab;
-    [SerializeField] private GameObject enemiesButtonGroup;
+
+    [SerializeField]
+    private GameObject enemiesButtonGroup;
 
     private Vector3 mousePosition;
+    private GameObject characterToMove;
 
     private void Start()
     {
+
         enemiesButtonGroup.SetActive(false);
+        adventureManager = FindObjectOfType<AdventureManager>();
     }
 
     private void Update()
+
     {
+
+        bool isEditing = GameManager.instance.GetEditingMode() == GameManager.EditingMode.Enemies;
+
         if (isEditing && !characterToMove)
         {
+
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             enemiesButtonGroup.SetActive(true);
 
@@ -35,7 +45,7 @@ public class EnemiesController : MonoBehaviour
 
                 if (hit.collider.CompareTag("Map"))
                 {
-                    GameObject enemy = Instantiate(enemyPrefab, new Vector3(mousePosition.x, mousePosition.y, 0), Quaternion.identity, transform);
+                    GameObject enemy = Instantiate(enemyPrefab, new Vector3(mousePosition.x, mousePosition.y, 0), Quaternion.identity, adventureManager.GetAdventureMap().transform);
                     enemy.GetComponent<Enemy>().SetEnemy(selectedEnemy);
                 }
                 else if (hit.collider.CompareTag("Character"))
@@ -89,14 +99,15 @@ public class EnemiesController : MonoBehaviour
         }
         else
         {
+
             enemiesButtonGroup.SetActive(false);
+
         }
     }
 
     public void SetEnemies(EnemySO[] enemies)
     {
         this.enemies = enemies;
-
         foreach (EnemySO enemy in enemies)
         {
             GameObject enemyButton = Instantiate(enemyButtonPrefab, enemiesButtonGroup.transform);
@@ -113,9 +124,17 @@ public class EnemiesController : MonoBehaviour
         foreach (GameObject enemyButton in enemiesButtons)
         {
             var EnemyButton = enemyButton.GetComponent<EnemyButton>();
-            print(EnemyButton.GetEnemyName());
-            print(enemy.name);
             EnemyButton.SetSelected(EnemyButton.GetEnemyName() == enemy.name);
         }
+    }
+
+    public void ClearEnemies()
+    {
+        print("Clearing enemies");
+        foreach (GameObject enemyButton in enemiesButtons)
+        {
+            Destroy(enemyButton);
+        }
+        enemiesButtons.Clear();
     }
 }

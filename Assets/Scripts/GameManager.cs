@@ -3,66 +3,113 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     [SerializeField] Canvas gameMasterCanvas;
-    [SerializeField] Canvas PlayersCanvas;
+    [SerializeField] Canvas playersCanvas;
+
+    [SerializeField] GameObject adventureUI;
+    [SerializeField] GameObject adventureSelectionUI;
 
     [SerializeField] GameObject fogEditingButton;
     [SerializeField] GameObject enemiesEditingButton;
     [SerializeField] GameObject marksEditingButton;
 
-    FogController fogController;
-    EnemiesController enemiesController;
-    MarksController marksController;
+    [SerializeField] AdventureSO[] adventures;
+    [SerializeField] AdventureButton adventureButtonPrefab;
+    [SerializeField] Button adventuresButton;
 
-    Image fogEditingButtonImage;
-    Image enemiesEditingButtonImage;
-    Image marksEditingButtonImage;
+    AdventureSO currentAdventure;
+
+    [SerializeField]
+    EnemiesController enemiesController;
+
+    AdventureManager adventureManager;
+
+    public enum EditingMode
+    {
+        None,
+        Fog,
+        Enemies,
+        Marks
+    }
+
+    private EditingMode editingMode = EditingMode.None;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
-        enemiesController = FindObjectOfType<EnemiesController>();
-        marksController = FindObjectOfType<MarksController>();
-        fogEditingButtonImage = fogEditingButton.GetComponent<Image>();
-        enemiesEditingButtonImage = enemiesEditingButton.GetComponent<Image>();
-        marksEditingButtonImage = marksEditingButton.GetComponent<Image>();
+        adventureManager = FindObjectOfType<AdventureManager>();
+        adventureUI.SetActive(false);
+        adventureSelectionUI.SetActive(true);
 
+        enemiesEditingButton.GetComponent<Button>().onClick.AddListener(() => SetEditingMode(EditingMode.Enemies));
+        fogEditingButton.GetComponent<Button>().onClick.AddListener(() => SetEditingMode(EditingMode.Fog));
+        marksEditingButton.GetComponent<Button>().onClick.AddListener(() => SetEditingMode(EditingMode.Marks));
+        adventuresButton.onClick.AddListener(ClearAdventure);
+
+
+        foreach (AdventureSO adventure in adventures)
+        {
+            AdventureButton adventureButton = Instantiate(adventureButtonPrefab, adventureSelectionUI.transform);
+            adventureButton.SetImage(adventure.Images[0]);
+            adventureButton.SetName(adventure.name);
+            adventureButton.GetComponent<Button>().onClick.AddListener(() => SetAdventure(adventure));
+        }
+
+        SetEditingMode(editingMode);
     }
 
-
-    public void SetFogEditing()
+    private void ClearAdventure()
     {
-
-        FindObjectOfType<FogController>().isEditing = true;
-        enemiesController.isEditing = false;
-        marksController.isEditing = false;
-        fogEditingButtonImage.color = Color.green;
-        enemiesEditingButtonImage.color = Color.white;
-        marksEditingButtonImage.color = Color.white;
+        SetEditingMode(EditingMode.None);
+        adventureSelectionUI.SetActive(true);
+        adventureUI.SetActive(false);
+        currentAdventure = null;
+        adventureManager.ClearAdventure();
+        enemiesController.ClearEnemies();
 
     }
-    public void SetEnemiesEditing()
+
+    public void SetEditingMode(EditingMode mode)
     {
-        FindObjectOfType<FogController>().isEditing = false;
-        enemiesController.isEditing = true;
-        marksController.isEditing = false;
-        enemiesEditingButtonImage.color = Color.green;
-        fogEditingButtonImage.color = Color.white;
-        marksEditingButtonImage.color = Color.white;
+        editingMode = mode;
+        SetEditingButtonColor(fogEditingButton, editingMode == EditingMode.Fog);
+        SetEditingButtonColor(enemiesEditingButton, editingMode == EditingMode.Enemies);
+        SetEditingButtonColor(marksEditingButton, editingMode == EditingMode.Marks);
+
     }
 
-    public void SetMarksEditing()
+    private void SetEditingButtonColor(GameObject button, bool isEditing)
     {
-        FindObjectOfType<FogController>().isEditing = false;
-        enemiesController.isEditing = false;
-        marksController.isEditing = true;
-        marksEditingButtonImage.color = Color.green;
-        enemiesEditingButtonImage.color = Color.white;
-        fogEditingButtonImage.color = Color.white;
+        button.GetComponent<Image>().color = isEditing ? Color.green : Color.white;
     }
 
+    public void SetAdventure(AdventureSO adventure)
+    {
+        currentAdventure = adventure;
+        adventureManager.SetAdventure(adventure);
+        adventureSelectionUI.SetActive(false);
+        adventureUI.SetActive(true);
+        SetEditingMode(EditingMode.None);
+    }
 
+    public EditingMode GetEditingMode()
+    {
+        return editingMode;
+    }
 
 }

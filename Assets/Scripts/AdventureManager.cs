@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class AdventureManager : MonoBehaviour
 {
-    [SerializeField] private AdventureSO adventure;
+    private AdventureSO adventure;
     [SerializeField] private GameObject imageGameObject;
     [SerializeField] private TMP_Dropdown imagesDropdown;
     [SerializeField] private TMP_Dropdown musicDropdown;
+    [SerializeField] private Button adventuresButton;
     [SerializeField] private PlayMusic playMusic;
-    [SerializeField] private EnemiesController enemiesController;
+    private EnemiesController enemiesController;
 
     private GameObject adventureMap;
+
 
     private class Music
     {
@@ -27,19 +30,10 @@ public class AdventureManager : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        InitializeAdventureMap();
-        InitializeImagesDropdown();
-        InitializeMusicDropdown();
-        InitializeEnemies();
-        imagesDropdown.onValueChanged.AddListener(OnImagesDropdownValueChanged);
-        musicDropdown.onValueChanged.AddListener(OnMusicDropdownValueChanged);
-    }
-
 
     private void InitializeEnemies()
     {
+        enemiesController = FindObjectOfType<EnemiesController>();
         enemiesController.SetEnemies(adventure.Enemies);
     }
 
@@ -155,5 +149,29 @@ public class AdventureManager : MonoBehaviour
             string name = (item != null) ? item.name : "None";
             musicDropdown.options.Add(new TMP_Dropdown.OptionData(name));
         }
+    }
+
+
+    public void SetAdventure(AdventureSO adventure)
+    {
+        this.adventure = adventure;
+        InitializeAdventureMap();
+        InitializeImagesDropdown();
+        InitializeMusicDropdown();
+        InitializeEnemies();
+        imagesDropdown.onValueChanged.AddListener(OnImagesDropdownValueChanged);
+        musicDropdown.onValueChanged.AddListener(OnMusicDropdownValueChanged);
+    }
+
+    public GameObject GetAdventureMap()
+    {
+        return adventureMap;
+    }
+
+    public void ClearAdventure()
+    {
+        Destroy(adventureMap);
+
+        this.adventure = null;
     }
 }

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -15,7 +14,6 @@ public class FogController : MonoBehaviour
     GameObject fogButtonGroup;
     Button applyFogButton;
 
-    public bool isEditing = false;
 
     void Start()
     {
@@ -29,6 +27,7 @@ public class FogController : MonoBehaviour
 
     void Update()
     {
+        bool isEditing = GameManager.instance.GetEditingMode() == GameManager.EditingMode.Fog;
         if (isEditing)
         {
             fogButtonGroup.SetActive(true);
@@ -45,7 +44,11 @@ public class FogController : MonoBehaviour
         }
         else
         {
-            fogButtonGroup.SetActive(false);
+            if (fogButtonGroup)
+            {
+                fogButtonGroup.SetActive(false);
+            }
+
         }
 
     }
@@ -70,23 +73,16 @@ public class FogController : MonoBehaviour
     }
 
 
-    public void EditFog()
-    {
-        isEditing = true;
-    }
-
-    // stop editing fog
-    public void StopEditFog()
-    {
-        isEditing = false;
-    }
-
     public void UpdateFrog()
     {
-        print("update fog");
-        // replace player fog with fog
         playerTileMap.ClearAllTiles();
         playerTileMap.SetTilesBlock(gameMasterTileMap.cellBounds, gameMasterTileMap.GetTilesBlock(gameMasterTileMap.cellBounds));
+    }
+
+    public void ClearFog()
+    {
+        gameMasterTileMap.ClearAllTiles();
+        playerTileMap.ClearAllTiles();
     }
 
 
