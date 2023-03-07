@@ -14,6 +14,7 @@ public class AdventureSO : ScriptableObject
     [SerializeField] private Sprite[] images;
     [SerializeField] private Sprite worldMap;
     [SerializeField] private Sprite townMap;
+    [SerializeField] private Sprite adventureImage;
 
     public string AdventureName { get => adventureName; }
     public string Description { get => description; }
@@ -23,5 +24,6 @@ public class AdventureSO : ScriptableObject
     public Sprite[] Images { get => images; }
     public Sprite WorldMap { get => worldMap; }
     public Sprite TownMap { get => townMap; }
+    public Sprite AdventureImage { get => adventureImage; }
 
 }

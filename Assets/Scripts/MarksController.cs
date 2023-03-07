@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,11 +5,11 @@ public class MarksController : MonoBehaviour
 {
 
     [SerializeField] GameObject markPrefab;
-    public bool isEditing;
 
     private void Update()
     {
-        if (isEditing)
+
+        if (GameManager.instance.GetEditingMode() == GameManager.EditingMode.Marks)
         {
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {

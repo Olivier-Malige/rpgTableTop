@@ -171,7 +171,7 @@ public class AdventureManager : MonoBehaviour
     public void ClearAdventure()
     {
         Destroy(adventureMap);
-
+        imageGameObject.SetActive(false);
         this.adventure = null;
     }
 }

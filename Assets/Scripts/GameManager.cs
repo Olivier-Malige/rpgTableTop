@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         foreach (AdventureSO adventure in adventures)
         {
             AdventureButton adventureButton = Instantiate(adventureButtonPrefab, adventureSelectionUI.transform);
-            adventureButton.SetImage(adventure.Images[0]);
+            adventureButton.SetImage(adventure.AdventureImage);
             adventureButton.SetName(adventure.name);
             adventureButton.GetComponent<Button>().onClick.AddListener(() => SetAdventure(adventure));
         }
