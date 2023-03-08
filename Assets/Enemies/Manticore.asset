@@ -46,5 +46,5 @@ MonoBehaviour:
   - name: Piquant
     content: "Attaque \xE0 distance avec une arme : +5 au toucher, port\xE9e 30/60
       m, une cible. Touch\xE9 : 7 (1d8 + 3) d\xE9g\xE2ts perforants."
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: d5c5c7a26822060f3bf1918b49a2c0f8, type: 3}
   health: 68

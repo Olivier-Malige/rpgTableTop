@@ -17,7 +17,7 @@ public class AdventureButton : MonoBehaviour
 
     public void SetImage(Sprite image)
     {
-        this.image = image;
+        GetComponent<Image>().sprite = image;
     }
 
     public void SetName(string name)

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: Adabra
+  m_EditorClassIdentifier: 
+  alignment: 
+  size: 2
+  armorClass: 10
+  speed: 9m
+  strength: 10 (+0)
+  dexterity: 10 (+0)
+  constitution: 10 (+0)
+  intelligence: 10 (+0)
+  wisdom: 10 (+0)
+  charisma: 10 (+0)
+  power: '0 '
+  description: 
+  languages: 
+  skills: 
+  senses: percepetion passive 10
+  capacity: []
+  actions:
+  - name: Gourdin
+    content: "Attaque d'arme au corps \xE0 corps: +2 pour toucher, allonge 1,50m,
+      une cible. Touch\xE9 : 2 d\xE9gat contandants"
+  image: {fileID: 21300000, guid: 7f969ce1af53110a19678c102ae9c1a1, type: 3}
+  health: 4

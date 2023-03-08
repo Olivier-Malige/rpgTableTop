@@ -1797,7 +1797,7 @@ Camera:
   far clip plane: 1000
   field of view: 146
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2260,7 +2260,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6243,7 +6243,8 @@ MonoBehaviour:
   marksEditingButton: {fileID: 1022634678}
   adventures:
   - {fileID: 11400000, guid: 1dc528d1db7046c4e8b136cba0d3689c, type: 2}
-  - {fileID: 11400000, guid: 1dc528d1db7046c4e8b136cba0d3689c, type: 2}
+  - {fileID: 11400000, guid: 9392fc2cbf35a1fc286324d329684048, type: 2}
+  - {fileID: 11400000, guid: 36234227eb0025b16ad492278a6c11c4, type: 2}
   adventureButtonPrefab: {fileID: 1083883961539104917, guid: 0a0cfde49019f07918f01ef305b5e368, type: 3}
   adventuresButton: {fileID: 1188140204}
   enemiesController: {fileID: 66501813}
