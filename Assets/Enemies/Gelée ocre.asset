@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: "Gel\xE9e ocre"
+  m_EditorClassIdentifier: 
+  alignment: 
+  size: 3
+  armorClass: 8
+  speed: ' 3 m, escalade 3 m '
+  strength: 15 (+2)
+  dexterity: 6 (-2)
+  constitution: 14 (+2)
+  intelligence: 2 (-4)
+  wisdom: 6 (-2)
+  charisma: 1 (-5)
+  power: 2 (450 PX)
+  description: "Une gel\xE9e ocre est une vase jaun\xE2tre qui peut se glisser sous
+    les portes et dans les interstices \xE9troits afin de d\xE9vorer les cr\xE9atures
+    qu'elle poursuit."
+  languages: 
+  skills: "aveugl\xE9, charm\xE9, assourdi, \xE9puisement, effray\xE9, \xE0 terre"
+  senses: "vision aveugle 18 m (aveugle au-del\xE0 de ce rayon), Perception passive
+    8"
+  capacity:
+  - name: Informe
+    content: "La gel\xE9e peut se d\xE9placer au travers d'espaces larges de 2,50
+      cm sans \xEAtre consid\xE9r\xE9e comme passant dans un espace \xE9troit."
+  - name: "Pattes d'araign\xE9e"
+    content: "La gel\xE9e peut escalader des surfaces difficiles et \xEAtre au plafond
+      la t\xEAte en bas sans avoir besoin d'effectuer un jet de caract\xE9ristique."
+  - name: "Immunit\xE9s aux d\xE9g\xE2ts"
+    content: foudre, tranchant
+  - name: "Immunit\xE9s aux \xE9tats"
+    content: "aveugl\xE9, charm\xE9, assourdi, \xE9puisement, effray\xE9, \xE0 terre"
+  - name: "R\xE9sistances aux d\xE9g\xE2ts "
+    content: acide
+  actions:
+  - name: Pseudopode
+    content: "ttaque au corps \xE0 corps avec une arme : +4 au toucher, allonge 1,50
+      m, une cible. Touch\xE9 : 9 (2d6 + 2) d\xE9g\xE2ts contondants + 3 (1d6) d'acide.  "
+  - name: Divison
+    content: "Lorsqu'une gel\xE9e de taille M ou sup\xE9rieure subit des d\xE9g\xE2ts
+      de foudre ou des d\xE9g\xE2ts tranchants, elle se divise en 2 nouvelles gel\xE9es
+      s'il lui reste au moins 10 points de vie. Chaque nouvelle gel\xE9e poss\xE8de
+      la moiti\xE9 des points de vie de l'originale, arrondis \xE0 l'entier inf\xE9rieur.
+      Les nouvelles gel\xE9es font une taille de moins que la gel\xE9e d'origine."
+  image: {fileID: 21300000, guid: dc0baf75532eeff3b9c57c3da3b76895, type: 3}
+  health: 45

@@ -12,22 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
   m_Name: Orc
   m_EditorClassIdentifier: 
-  alignment: 
+  alignment: chaotique mauvais
   size: 2
-  armorClass: 0
-  speed: 0
-  strength: 0
-  dexterity: 0
-  constitution: 0
-  intelligence: 0
-  wisdom: 0
-  charisma: 0
-  power: 
-  description: 
-  languages: 
-  skills: 
-  senses: 
-  capacity: []
-  actions: []
-  image: {fileID: 0}
-  health: 0
+  armorClass: 13
+  speed: '9 m '
+  strength: 16 (+3)
+  dexterity: 12 (+1)
+  constitution: 16 (+3)
+  intelligence: 7 (-2)
+  wisdom: 11 (+0)
+  charisma: 10 (+0)
+  power: 1/2 (100 PX)
+  description: "Les orcs sont des humano\xEFdes sauvages qui ont une posture vout\xE9e,
+    des visages grossiers et des dents pro\xE9minentes qui ressemblent \xE0 des d\xE9fenses.
+    Ils se rassemblent en tribus qui \xE9tanchent leur soif de sang en attaquant
+    tous les humano\xEFdes qu'ils croisent."
+  languages: commun, orc
+  skills: Intimidation +2
+  senses: vision dans le noir 18 m, Perception passive 10
+  capacity:
+  - name: Agressif
+    content: "Par une action bonus, l'orc peut se d\xE9placer de sa vitesse vers
+      une cr\xE9ature hostile qu'il peut voir."
+  actions:
+  - name: "Hache \xE0 deux mains"
+    content: "Attaque au corps \xE0 corps avec une arme : +5 au toucher, allonge
+      1,50 m, une cible. Touch\xE9 : 9 (1d12 + 3) d\xE9g\xE2ts tranchants."
+  - name: Javeline
+    content: "Attaque au corps \xE0 corps ou \xE0 distance avec une arme : +5 au
+      toucher, allonge 1,50 m ou port\xE9e 9/36 m, une cible. Touch\xE9 : 6 (1d6
+      + 3) d\xE9g\xE2ts perforants."
+  image: {fileID: 21300000, guid: f14d87bdf0a6f531bb9c39af87226a09, type: 3}
+  health: 15

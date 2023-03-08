@@ -17,8 +17,18 @@ MonoBehaviour:
   mapPrefab: {fileID: 3867709713268479384, guid: c562b1bf732b0778fbaa23262e46c08a, type: 3}
   enemies:
   - {fileID: 11400000, guid: ce116c4954f664e6ab32ab603cbfce61, type: 2}
-  sounds: []
-  images: []
+  - {fileID: 11400000, guid: 9783166d3bf855339bfdffc8b0555228, type: 2}
+  - {fileID: 11400000, guid: 52d2e46ff997f8f968af945cdbde772a, type: 2}
+  sounds:
+  - {fileID: 8300000, guid: 9df576b6d340e5962acb21a2c826de63, type: 3}
+  - {fileID: 8300000, guid: 854c250feba4e15408ebb1573f0705c5, type: 3}
+  - {fileID: 8300000, guid: 782998e1350def9409133bde6d18e677, type: 3}
+  - {fileID: 8300000, guid: 1a4df77130f85e84eb8a7ef249e621e9, type: 3}
+  - {fileID: 8300000, guid: e0b9a2e392cfacb44918e752a0a70a5b, type: 3}
+  images:
+  - {fileID: 21300000, guid: 2b7fd43ef7e9b23debaee39a5fbf0566, type: 3}
+  - {fileID: 21300000, guid: f5e5e897f059b4a418e514df0ea599d4, type: 3}
+  - {fileID: 21300000, guid: 4d75172c9c5c3e897a834bb6b8647879, type: 3}
   worldMap: {fileID: 21300000, guid: cfc24a0068b879346af288860ab0bdd9, type: 3}
   townMap: {fileID: 21300000, guid: 104b682113b63cb4b9cc41400dd7d853, type: 3}
   adventureImage: {fileID: 21300000, guid: 2b7fd43ef7e9b23debaee39a5fbf0566, type: 3}

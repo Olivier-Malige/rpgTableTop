@@ -19,9 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dd7539ac44f4f4748be22e9fb15c013c, type: 2}
   - {fileID: 11400000, guid: 01984607d99005abb95883604617d22b, type: 2}
   sounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 337edf42fda728140af9d1ef65fbfd36, type: 3}
+  - {fileID: 8300000, guid: e0b9a2e392cfacb44918e752a0a70a5b, type: 3}
+  - {fileID: 8300000, guid: b981f64c24bb5ea47bf1aff12f2422ce, type: 3}
+  - {fileID: 8300000, guid: 1a4df77130f85e84eb8a7ef249e621e9, type: 3}
+  - {fileID: 8300000, guid: 782998e1350def9409133bde6d18e677, type: 3}
   images:
   - {fileID: 21300000, guid: 3b2152c7d22bece2faeef7169205271f, type: 3}
   - {fileID: 21300000, guid: 52e3d26d5fe3ac9f883b7c937b9e5d21, type: 3}
