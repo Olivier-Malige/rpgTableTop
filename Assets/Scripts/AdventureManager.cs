@@ -171,6 +171,7 @@ public class AdventureManager : MonoBehaviour
         InitializeEnemies();
         imagesDropdown.onValueChanged.AddListener(OnImagesDropdownValueChanged);
         musicDropdown.onValueChanged.AddListener(OnMusicDropdownValueChanged);
+        imagesDropdown.value = 1;
     }
 
     public GameObject GetAdventureMap()
