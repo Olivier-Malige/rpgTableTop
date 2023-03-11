@@ -12,6 +12,8 @@ public class AdventureManager : MonoBehaviour
     [SerializeField] private TMP_Dropdown musicDropdown;
     [SerializeField] private Button adventuresButton;
     [SerializeField] private PlayMusic playMusic;
+    [SerializeField] private CamerasController camerasController;
+
     private EnemiesController enemiesController;
 
     private GameObject adventureMap;
@@ -27,6 +29,11 @@ public class AdventureManager : MonoBehaviour
     {
         public string Name { get; set; }
         public Sprite Sprite { get; set; }
+    }
+
+    private void Start()
+    {
+        camerasController = FindObjectOfType<CamerasController>();
     }
 
 
@@ -106,11 +113,14 @@ public class AdventureManager : MonoBehaviour
             adventureMap.SetActive(false);
             imageGameObject.SetActive(true);
             imageGameObject.GetComponent<SpriteRenderer>().sprite = selectedImage.Sprite;
+            camerasController.MoveCamerasToPosition(imageGameObject.gameObject.transform.position, 10f);
+
         }
         else
         {
             imageGameObject.SetActive(false);
             adventureMap.SetActive(true);
+            camerasController.MoveCamerasToPosition(adventureMap.gameObject.transform.position, 20f);
         }
     }
 

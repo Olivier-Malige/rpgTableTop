@@ -28,7 +28,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3b2152c7d22bece2faeef7169205271f, type: 3}
   - {fileID: 21300000, guid: 52e3d26d5fe3ac9f883b7c937b9e5d21, type: 3}
   - {fileID: 21300000, guid: d0d408aaa64fb132792dc2f0475d4899, type: 3}
-  - {fileID: 21300000, guid: d5c5c7a26822060f3bf1918b49a2c0f8, type: 3}
+  - {fileID: 21300000, guid: 4f351804a0b6a41c4bb272e44120b5af, type: 3}
   worldMap: {fileID: 21300000, guid: cfc24a0068b879346af288860ab0bdd9, type: 3}
   townMap: {fileID: 21300000, guid: 104b682113b63cb4b9cc41400dd7d853, type: 3}
   adventureImage: {fileID: 21300000, guid: 52e3d26d5fe3ac9f883b7c937b9e5d21, type: 3}

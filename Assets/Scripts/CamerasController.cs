@@ -84,4 +84,12 @@ public class CamerasController : MonoBehaviour
             }
         }
     }
+
+    public void MoveCamerasToPosition(Vector3 position, float zoomSize = 12f)
+    {
+        GameCamera.transform.position = new Vector3(position.x, position.y, GameCamera.transform.position.z);
+        GMCamera.transform.position = new Vector3(position.x, position.y, GMCamera.transform.position.z);
+        GameCamera.orthographicSize = zoomSize;
+        GMCamera.orthographicSize = zoomSize;
+    }
 }
