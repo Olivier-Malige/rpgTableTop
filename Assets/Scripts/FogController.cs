@@ -11,7 +11,6 @@ public class FogController : MonoBehaviour
     [SerializeField] Tilemap playerTileMap;
     [SerializeField] TileBase fogTile;
 
-    GameObject fogButtonGroup;
     Button applyFogButton;
 
 
@@ -19,10 +18,10 @@ public class FogController : MonoBehaviour
     {
         gameMasterTileMap.gameObject.SetActive(true);
         playerTileMap.gameObject.SetActive(true);
-        fogButtonGroup = GameObject.Find("FogButtonGroup");
 
         applyFogButton = GameObject.Find("ApplyFogButton").GetComponent<Button>();
-        applyFogButton.onClick.AddListener(UpdateFrog);
+        applyFogButton.onClick.AddListener(UpdateFog);
+        UpdateFog();
     }
 
     void Update()
@@ -30,7 +29,7 @@ public class FogController : MonoBehaviour
         bool isEditing = GameManager.instance.GetEditingMode() == GameManager.EditingMode.Fog;
         if (isEditing)
         {
-            fogButtonGroup.SetActive(true);
+
             if ((Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space)) && !EventSystem.current.IsPointerOverGameObject())
             {
                 CreateTile();
@@ -39,14 +38,6 @@ public class FogController : MonoBehaviour
             if ((Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.Delete)) && !EventSystem.current.IsPointerOverGameObject())
             {
                 RemoveTile();
-            }
-
-        }
-        else
-        {
-            if (fogButtonGroup)
-            {
-                fogButtonGroup.SetActive(false);
             }
 
         }
@@ -73,7 +64,7 @@ public class FogController : MonoBehaviour
     }
 
 
-    public void UpdateFrog()
+    public void UpdateFog()
     {
         playerTileMap.ClearAllTiles();
         playerTileMap.SetTilesBlock(gameMasterTileMap.cellBounds, gameMasterTileMap.GetTilesBlock(gameMasterTileMap.cellBounds));

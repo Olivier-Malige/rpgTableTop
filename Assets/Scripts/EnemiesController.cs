@@ -130,7 +130,6 @@ public class EnemiesController : MonoBehaviour
 
     public void ClearEnemies()
     {
-        print("Clearing enemies");
         foreach (GameObject enemyButton in enemiesButtons)
         {
             Destroy(enemyButton);

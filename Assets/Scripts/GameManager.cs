@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] AdventureButton adventureButtonPrefab;
     [SerializeField] Button adventuresButton;
 
+    FogController fogController;
     AdventureSO currentAdventure;
 
     [SerializeField]
