@@ -18,6 +18,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: dd7539ac44f4f4748be22e9fb15c013c, type: 2}
   - {fileID: 11400000, guid: 01984607d99005abb95883604617d22b, type: 2}
+  - {fileID: 11400000, guid: da7b4b624ba53a1429f5e0ac5d57d569, type: 2}
   sounds:
   - {fileID: 8300000, guid: 337edf42fda728140af9d1ef65fbfd36, type: 3}
   - {fileID: 8300000, guid: e0b9a2e392cfacb44918e752a0a70a5b, type: 3}
@@ -29,6 +30,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 52e3d26d5fe3ac9f883b7c937b9e5d21, type: 3}
   - {fileID: 21300000, guid: d0d408aaa64fb132792dc2f0475d4899, type: 3}
   - {fileID: 21300000, guid: 4f351804a0b6a41c4bb272e44120b5af, type: 3}
+  - {fileID: 21300000, guid: 47ec38a5a31efe440809a7959ba74e4b, type: 3}
   worldMap: {fileID: 21300000, guid: cfc24a0068b879346af288860ab0bdd9, type: 3}
   townMap: {fileID: 21300000, guid: 104b682113b63cb4b9cc41400dd7d853, type: 3}
   adventureImage: {fileID: 21300000, guid: 52e3d26d5fe3ac9f883b7c937b9e5d21, type: 3}

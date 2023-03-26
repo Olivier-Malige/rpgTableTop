@@ -18,8 +18,7 @@ public class AddEnemy : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                var enemy = Instantiate(enemyPrefab, new Vector3(mousePosition.x, mousePosition.y, 0), Quaternion.identity);
-
+                 Instantiate(enemyPrefab, new Vector3(mousePosition.x, mousePosition.y, 0), Quaternion.identity);
             }
 
             // right click pyhsics2d raycast
@@ -37,7 +36,6 @@ public class AddEnemy : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 inAdding = false;
-
             }
         }
 

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e914f0dbd33136478809e7ea5e6b308, type: 3}
+  m_Name: Wurlf
+  m_EditorClassIdentifier: 
+  alignment: Chaotic bon
+  size: 2
+  armorClass: 16
+  speed: 9m
+  strength: 15 (+2)
+  dexterity: 13 (+1)
+  constitution: 16 (+3)
+  intelligence: 10 (+0)
+  wisdom: 12 (+1)
+  charisma: 10 (+0)
+  power: '0 '
+  description: 
+  languages: Commun et nain
+  skills: 
+  senses: percepetion passive 13
+  capacity:
+  - name: Defenseur
+    content: "Impose le d\xE9savantage au jets d'attaque d'une cr\xE9ature situ\xE9e
+      \xE0 1,50m ou moins de lui, \xE0 condition qu'il ne soit pas la cible de l'attaque.
+      Il doit voir l'assaillant pour ce faire."
+  - name: "Critique am\xE9lior\xE9"
+    content: "Les jets d'attaques du compagnon d'armes augmLes jets d'attque obetinnent
+      d\xE9sormais un coup critique si le r\xE9sultats du d20 est de 19 ou 20"
+  actions:
+  - name: Harche d'arme
+    content: 1d8 tranchant + 2 toucher
+  - name: Bouclier
+    content: +2 CA
+  - name: Armure
+    content: +1 CA
+  image: {fileID: 21300000, guid: 433b0383258399f409a605581eb83c34, type: 3}
+  health: 28

@@ -6,6 +6,7 @@ public class CamerasController : MonoBehaviour
 {
     public Camera GameCamera;
     public Camera GMCamera;
+    [SerializeField] Camera _miniMap;
 
     private float speed = 10f;
 
@@ -83,7 +84,15 @@ public class CamerasController : MonoBehaviour
                 GameCamera.orthographicSize += speed * Time.deltaTime;
             }
         }
+
     }
+
+    public void LateUpdate()
+    {
+        _miniMap.transform.position = new Vector3(GameCamera.transform.position.x, GameCamera.transform.position.y, _miniMap.transform.position.z);
+        _miniMap.orthographicSize = GameCamera.orthographicSize;
+    }
+
 
     public void MoveCamerasToPosition(Vector3 position, float zoomSize = 12f)
     {

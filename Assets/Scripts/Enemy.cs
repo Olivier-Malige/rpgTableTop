@@ -45,6 +45,8 @@ public class Enemy : MonoBehaviour
         spriteRenderer.sprite = enemySO.image;
         // get enemy size and scale it
         float scale = 1;
+
+
         switch (enemySO.getSize())
         {
             case Size.Tiny:
